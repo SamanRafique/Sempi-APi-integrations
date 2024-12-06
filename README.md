@@ -25,10 +25,14 @@ The system combines responses from both marketplaces into a single JSON object a
 
 # Setup and Installation
 **1. Clone the repository**
+
 git clone git@github.com:SamanRafique/Sempi-APi-integrations.git
+
 cd Sempi-APi-integrations
 **2. Install dependencies**
+
 gem install bundler
+
 bundle install
 
 **3. Install external services**
@@ -37,19 +41,28 @@ bundle install
 You can use the provided sh setup.sh script to start the mock servers
 
 **4. Running the Rails Server**
+
 rails server
 
 # API Endpoints
 **1. POST /api/products**
-POST request to /api/products using postman or using curl **curl -X POST http://localhost:3000/api/products   -H "Content-Type: application/json"   -d '{"name": "Test Product", "price": 1999, "sku": "TEST123"}'**
+POST request to /api/products using postman or using curl 
+**curl -X POST http://localhost:3000/api/products   -H "Content-Type: application/json"   -d '{"name": "Test Product", "price": 1999, "sku": "TEST123"}'**
+
 Creates a product on both Marketplace A and Marketplace B and attempts to publish it on Marketplace B.
 # Testing
 **1. Run Tests**
+
 run test using **rspec** or simply **rspec ./spec/requests/api/products_spec.rb**
 
 **Dependencies**
+
 Ruby 2.7 or higher
+
 Rails 6.x or higher
+
 HTTParty (for making HTTP requests)
+
 RSpec (for testing)
+
 Sinatra (for mock marketplace APIs)
